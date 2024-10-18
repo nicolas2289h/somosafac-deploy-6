@@ -46,7 +46,7 @@
 //            usuario.setNombre(faker.name().firstName());
 //            usuario.setApellido(faker.name().lastName());
 //            usuario.setCorreo(faker.internet().emailAddress());
-//            usuario.setContrasenaHash("hashed_password");
+//            usuario.setContrasenaHash("abc12345/");
 //            usuario.setTipoUsuario(Role.ADMIN);
 //            usuario.setFechaRegistro(LocalDateTime.now());
 //            usuario.setActivo(true);

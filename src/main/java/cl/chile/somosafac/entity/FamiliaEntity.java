@@ -76,10 +76,10 @@ public class FamiliaEntity {
     @Column(name = "tiempo_para_acoger")
     private Integer tiempoParaAcoger;
 
-//    @Column(name = "cantidad_acogimientos", columnDefinition = "INT DEFAULT 0")
+    @Column(name = "cantidad_acogimientos", columnDefinition = "INT DEFAULT 0")
     private Integer cantidadAcogimientos;
 
-//    @Column(name = "estado_acogimiento", length = 10, columnDefinition = "VARCHAR(10) DEFAULT 'SA'")
+    @Column(name = "estado_acogimiento", length = 10, columnDefinition = "VARCHAR(10) DEFAULT 'SA'")
     private String estadoAcogimiento;
 
     @Column(name = "fecha_inicio_acogimiento")

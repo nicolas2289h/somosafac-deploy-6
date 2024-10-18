@@ -12,9 +12,9 @@ public class FamiliaMapperManual {
 
     // Conversión de FamiliaEntity a FamiliaDTO
     public static FamiliaDTO familiaToDto(FamiliaEntity familia) {
-        if (familia == null) {
-            return null; // o lanza una excepción
-        }
+//        if (familia == null) {
+//            return null; // o lanza una excepción
+//        }
         FamiliaDTO familiaDTO = new FamiliaDTO();
         familiaDTO.setId(familia.getId());
         FamiliaDTO dto = new FamiliaDTO();
@@ -48,21 +48,21 @@ public class FamiliaMapperManual {
         dto.setUsuarioCreacion(familia.getUsuarioCreacion());
 
         // Manejo de fechas
-        if (familia.getFechaCreacion() != null) {
+//        if (familia.getFechaCreacion() != null) {
             dto.setFechaCreacion(familia.getFechaCreacion().atZone(ZoneId.systemDefault()).toLocalDateTime());
-        }
-        if (familia.getFechaModificacion() != null) {
+//        }
+//        if (familia.getFechaModificacion() != null) {
             dto.setFechaModificacion(familia.getFechaModificacion().atZone(ZoneId.systemDefault()).toLocalDateTime());
-        }
+//        }
 
         dto.setEstadoAcogimiento(familia.getEstadoAcogimiento());
 
         // Manejo del usuario
-        if (familia.getUsuario() != null) {
+//        if (familia.getUsuario() != null) {
             dto.setUsuario(Long.valueOf(familia.getUsuario().getId().toString()));
-        } else {
-            dto.setUsuario(null); // o algún valor por defecto
-        }
+//        } else {
+//            dto.setUsuario(null); // o algún valor por defecto
+//        }
 
         return dto;
     }
@@ -72,12 +72,12 @@ public class FamiliaMapperManual {
         FamiliaEntity familia = new FamiliaEntity();
 
         // Manejo de fechas
-        if (familiaDTO.getFechaCreacion() != null) {
+//        if (familiaDTO.getFechaCreacion() != null) {
             familia.setFechaCreacion(LocalDateTime.from(familiaDTO.getFechaCreacion().atZone(ZoneId.systemDefault()).toInstant()));
-        }
-        if (familiaDTO.getFechaModificacion() != null) {
+//        }
+//        if (familiaDTO.getFechaModificacion() != null) {
             familia.setFechaModificacion(LocalDateTime.from(familiaDTO.getFechaModificacion().atZone(ZoneId.systemDefault()).toInstant()));
-        }
+//        }
 
         familia.setEstadoAcogimiento(familiaDTO.getEstadoAcogimiento());
 

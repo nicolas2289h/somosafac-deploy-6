@@ -96,7 +96,6 @@ public class AuthService {
             notificacionRepository.save(notificacion);
         }
 
-
         return UsuarioDTO.fromEntity(usuario);
     }
 
